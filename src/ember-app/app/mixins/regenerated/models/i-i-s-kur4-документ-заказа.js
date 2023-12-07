@@ -86,7 +86,16 @@ export let defineProjections = function (modelClass) {
     сумма: attr('Сумма', { index: 2 }),
     заказСобран: attr('Заказ собран', { index: 3 }),
     заказОтправ: attr('Заказ отправлен', { index: 4 }),
-    заказПолучен: attr('Заказ получен', { index: 5 })
+    заказПолучен: attr('Заказ получен', { index: 5 }),
+    питание: belongsTo('i-i-s-kur4-питание', 'Питание', {
+      видПитания: attr('Питание', { index: 7, hidden: true })
+    }, { index: 6, displayMemberPath: 'кодПитания' }),
+    контрагенты: belongsTo('i-i-s-kur4-контрагенты', 'Контрагенты', {
+      кодКонтиагента: attr('Код контрагента', { index: 9, hidden: true })
+    }, { index: 8, displayMemberPath: 'наименование' }),
+    сотрудники: belongsTo('i-i-s-kur4-сотрудники', 'Сотрудники', {
+      кодСотрудника: attr('Код сотрудника', { index: 11 })
+    }, { index: 10, displayMemberPath: 'фамилия' })
   });
 
   modelClass.defineProjection('ДокументЗаказаL', 'i-i-s-kur4-документ-заказа', {
@@ -96,21 +105,14 @@ export let defineProjections = function (modelClass) {
     заказСобран: attr('Заказ собран', { index: 3 }),
     заказОтправ: attr('Заказ отправлен', { index: 4 }),
     заказПолучен: attr('Заказ получен', { index: 5 }),
-    питание: belongsTo('i-i-s-kur4-питание', 'Код питания', {
-      кодПитания: attr('Код питания', { index: 6 }),
-      видПитания: attr('Вид питания', { index: 7 })
+    питание: belongsTo('i-i-s-kur4-питание', 'Вид питания', {
+      видПитания: attr('Вид питания', { index: 6 })
     }, { index: -1, hidden: true }),
     контрагенты: belongsTo('i-i-s-kur4-контрагенты', 'Код контрагента', {
-      кодКонтиагента: attr('Код контрагента', { index: 8 }),
-      наименование: attr('Наименование контрагента', { index: 9 })
+      кодКонтиагента: attr('Код контрагента', { index: 7 })
     }, { index: -1, hidden: true }),
-    сотрудники: belongsTo('i-i-s-kur4-сотрудники', 'Фамилия сотрудника', {
-      фамилия: attr('Фамилия сотрудника', { index: 10 }),
-      имя: attr('Имя сотрудника', { index: 11 }),
-      отчество: attr('Отчество сотрудника', { index: 12 }),
-      должности: belongsTo('i-i-s-kur4-должности', '', {
-        наименование: attr('Должность', { index: 13 })
-      }, { index: -1, hidden: true })
+    сотрудники: belongsTo('i-i-s-kur4-сотрудники', 'Код сотрудника', {
+      кодСотрудника: attr('Код сотрудника', { index: 8 })
     }, { index: -1, hidden: true })
   });
 };

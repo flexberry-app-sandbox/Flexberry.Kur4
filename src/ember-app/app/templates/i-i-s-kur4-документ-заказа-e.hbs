@@ -85,4 +85,68 @@
     }}
     {{flexberry-validationmessage error=(v-get validationModel "заказПолучен" "message")}}
   </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-kur4-документ-заказа-e.питание-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.питание
+      displayAttributeName="кодПитания"
+      autocomplete=true
+      relationName="питание"
+      projection="ПитаниеL"
+      title=(t "forms.i-i-s-kur4-документ-заказа-e.питание-caption")
+      readonly=readonly
+      componentName="питаниеLookup"
+      class=(if (v-get validationModel "питание" "isInvalid") "error")
+      data-test-i-i-s-kur4-документ-заказа-e-питание=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "питание" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-kur4-документ-заказа-e.контрагенты-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.контрагенты
+      displayAttributeName="наименование"
+      autocomplete=true
+      relationName="контрагенты"
+      projection="КонтрагентыL"
+      title=(t "forms.i-i-s-kur4-документ-заказа-e.контрагенты-caption")
+      readonly=readonly
+      componentName="контрагентыLookup"
+      class=(if (v-get validationModel "контрагенты" "isInvalid") "error")
+      data-test-i-i-s-kur4-документ-заказа-e-контрагенты=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "контрагенты" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-kur4-документ-заказа-e.сотрудники-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.сотрудники
+      displayAttributeName="фамилия"
+      autocomplete=true
+      relationName="сотрудники"
+      projection="СотрудникиL"
+      title=(t "forms.i-i-s-kur4-документ-заказа-e.сотрудники-caption")
+      readonly=readonly
+      componentName="сотрудникиLookup"
+      class=(if (v-get validationModel "сотрудники" "isInvalid") "error")
+      data-test-i-i-s-kur4-документ-заказа-e-сотрудники=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "сотрудники" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.сотрудники.кодСотрудника
+      class=(if (v-get validationModel.сотрудники "кодСотрудника" "isInvalid") "error")
+      label=(t "forms.i-i-s-kur4-документ-заказа-e.сотрудники.кодСотрудника-caption")
+      data-test-i-i-s-kur4-документ-заказа-e-сотрудники-кодСотрудника=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.сотрудники "кодСотрудника" "message")}}
+  </div>
 </form>

@@ -22,31 +22,30 @@ export default Controller.extend({
             link: 'i-i-s-kur4-контрагенты-l',
             caption: i18n.t('forms.application.sitemap.kur4.i-i-s-kur4-контрагенты-l.caption'),
             title: i18n.t('forms.application.sitemap.kur4.i-i-s-kur4-контрагенты-l.title'),
-            icon: 'briefcase',
             children: null
           }, {
             link: 'i-i-s-kur4-питание-l',
             caption: i18n.t('forms.application.sitemap.kur4.i-i-s-kur4-питание-l.caption'),
             title: i18n.t('forms.application.sitemap.kur4.i-i-s-kur4-питание-l.title'),
-            icon: 'file',
+            icon: 'tags',
             children: null
           }, {
             link: 'i-i-s-kur4-должности-l',
             caption: i18n.t('forms.application.sitemap.kur4.i-i-s-kur4-должности-l.caption'),
             title: i18n.t('forms.application.sitemap.kur4.i-i-s-kur4-должности-l.title'),
-            icon: 'archive',
+            icon: 'chart line',
             children: null
           }, {
             link: 'i-i-s-kur4-сотрудники-l',
             caption: i18n.t('forms.application.sitemap.kur4.i-i-s-kur4-сотрудники-l.caption'),
             title: i18n.t('forms.application.sitemap.kur4.i-i-s-kur4-сотрудники-l.title'),
-            icon: 'tags',
+            icon: 'paperclip',
             children: null
           }, {
             link: 'i-i-s-kur4-документ-заказа-l',
             caption: i18n.t('forms.application.sitemap.kur4.i-i-s-kur4-документ-заказа-l.caption'),
             title: i18n.t('forms.application.sitemap.kur4.i-i-s-kur4-документ-заказа-l.title'),
-            icon: 'file',
+            icon: 'phone',
             children: null
           }]
         }

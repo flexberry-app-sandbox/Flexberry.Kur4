@@ -127,7 +127,71 @@
           "index": 5
         }
       ],
-      "belongsTo": [],
+      "belongsTo": [
+        {
+          "lookupValue": "КодПитания",
+          "lookupValueField": "кодПитания",
+          "relationName": "Питание",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "видПитания",
+              "caption": "Питание",
+              "hidden": true,
+              "index": 7
+            }
+          ],
+          "index": 6,
+          "type": "standard",
+          "caption": "Питание",
+          "name": "питание",
+          "relatedTo": "i-i-s-kur4-питание",
+          "inverse": null
+        },
+        {
+          "lookupValue": "Наименование",
+          "lookupValueField": "наименование",
+          "relationName": "Контрагенты",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "кодКонтиагента",
+              "caption": "Код контрагента",
+              "hidden": true,
+              "index": 9
+            }
+          ],
+          "index": 8,
+          "type": "standard",
+          "caption": "Контрагенты",
+          "name": "контрагенты",
+          "relatedTo": "i-i-s-kur4-контрагенты",
+          "inverse": null
+        },
+        {
+          "lookupValue": "Фамилия",
+          "lookupValueField": "фамилия",
+          "relationName": "Сотрудники",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "кодСотрудника",
+              "caption": "Код сотрудника",
+              "hidden": false,
+              "index": 11
+            }
+          ],
+          "index": 10,
+          "type": "standard",
+          "caption": "Сотрудники",
+          "name": "сотрудники",
+          "relatedTo": "i-i-s-kur4-сотрудники",
+          "inverse": null
+        }
+      ],
       "hasMany": []
     },
     {
@@ -180,21 +244,15 @@
           "hidden": false,
           "attrs": [
             {
-              "name": "кодПитания",
-              "caption": "Код питания",
-              "hidden": false,
-              "index": 6
-            },
-            {
               "name": "видПитания",
               "caption": "Вид питания",
               "hidden": false,
-              "index": 7
+              "index": 6
             }
           ],
           "index": -1,
           "type": "default",
-          "caption": "Код питания",
+          "caption": "Вид питания",
           "name": "питание",
           "relatedTo": "i-i-s-kur4-питание",
           "inverse": null
@@ -210,13 +268,7 @@
               "name": "кодКонтиагента",
               "caption": "Код контрагента",
               "hidden": false,
-              "index": 8
-            },
-            {
-              "name": "наименование",
-              "caption": "Наименование контрагента",
-              "hidden": false,
-              "index": 9
+              "index": 7
             }
           ],
           "index": -1,
@@ -230,53 +282,19 @@
           "lookupValue": null,
           "lookupValueField": null,
           "relationName": "Сотрудники",
-          "belongsTo": [
-            {
-              "lookupValue": null,
-              "lookupValueField": null,
-              "relationName": "Сотрудники.Должности",
-              "belongsTo": [],
-              "hidden": false,
-              "attrs": [
-                {
-                  "name": "наименование",
-                  "caption": "Должность",
-                  "hidden": false,
-                  "index": 13
-                }
-              ],
-              "index": -1,
-              "type": null,
-              "caption": "",
-              "name": "должности",
-              "relatedTo": "i-i-s-kur4-должности",
-              "inverse": null
-            }
-          ],
+          "belongsTo": [],
           "hidden": false,
           "attrs": [
             {
-              "name": "фамилия",
-              "caption": "Фамилия сотрудника",
+              "name": "кодСотрудника",
+              "caption": "Код сотрудника",
               "hidden": false,
-              "index": 10
-            },
-            {
-              "name": "имя",
-              "caption": "Имя сотрудника",
-              "hidden": false,
-              "index": 11
-            },
-            {
-              "name": "отчество",
-              "caption": "Отчество сотрудника",
-              "hidden": false,
-              "index": 12
+              "index": 8
             }
           ],
           "index": -1,
           "type": "default",
-          "caption": "Фамилия сотрудника",
+          "caption": "Код сотрудника",
           "name": "сотрудники",
           "relatedTo": "i-i-s-kur4-сотрудники",
           "inverse": null

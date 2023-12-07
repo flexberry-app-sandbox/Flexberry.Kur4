@@ -1,0 +1,89 @@
+﻿{
+  "name": "IISKur4Питание",
+  "modelName": "i-i-s-kur4-питание",
+  "className": "Питание",
+  "nameSpace": "IIS.Kur4",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "видПитания",
+      "type": "i-i-s-kur4-питания",
+      "flexberryType": "Питания",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "кодПитания",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [
+    {
+      "name": "регистрБлюд",
+      "relatedTo": "i-i-s-kur4-регистр-блюд",
+      "inverse": "питание"
+    }
+  ],
+  "projections": [
+    {
+      "name": "ПитаниеE",
+      "modelName": "i-i-s-kur4-питание",
+      "attrs": [
+        {
+          "name": "кодПитания",
+          "caption": "Код питания",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "видПитания",
+          "caption": "Вид питания",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": [
+        {
+          "projectionName": "РегистрБлюдE",
+          "caption": "Блюда",
+          "name": "регистрБлюд",
+          "relatedTo": "i-i-s-kur4-регистр-блюд",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "ПитаниеL",
+      "modelName": "i-i-s-kur4-питание",
+      "attrs": [
+        {
+          "name": "кодПитания",
+          "caption": "Код питания",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "видПитания",
+          "caption": "Вид питания",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

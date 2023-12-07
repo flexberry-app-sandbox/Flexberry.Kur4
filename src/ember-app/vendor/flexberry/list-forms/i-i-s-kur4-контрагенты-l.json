@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-kur4-контрагенты-e",
+  "editForm": "i-i-s-kur4-контрагенты-e",
+  "external": false,
+  "caption": "Контрагенты",
+  "name": "IISKur4КонтрагентыL",
+  "className": "КонтрагентыL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-kur4-контрагенты",
+      "modelProjection": "КонтрагентыL"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-kur4-питание-e",
+  "editForm": "i-i-s-kur4-питание-e",
+  "external": false,
+  "caption": "Питание",
+  "name": "IISKur4ПитаниеL",
+  "className": "ПитаниеL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-kur4-питание",
+      "modelProjection": "ПитаниеL"
+    }
+  ]
+}

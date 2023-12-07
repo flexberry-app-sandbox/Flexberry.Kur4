@@ -1,0 +1,39 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Питание",
+      "projection": "ПитаниеL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Контрагенты",
+      "projection": "КонтрагентыL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Сотрудники",
+      "projection": "СотрудникиL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Документ заказа",
+  "name": "IISKur4ДокументЗаказаE",
+  "className": "ДокументЗаказаE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-kur4-документ-заказа",
+      "modelProjection": "ДокументЗаказаE"
+    }
+  ]
+}

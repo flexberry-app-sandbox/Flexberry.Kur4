@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Питание",
+  "name": "IISKur4ПитаниеE",
+  "className": "ПитаниеE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-kur4-питание",
+      "modelProjection": "ПитаниеE"
+    }
+  ]
+}

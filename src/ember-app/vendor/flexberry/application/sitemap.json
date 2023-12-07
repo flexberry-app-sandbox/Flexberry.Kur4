@@ -1,0 +1,50 @@
+﻿{
+  "applicationCaption": "Kur4",
+  "applicationTitle": "Kur4",
+  "items": [
+    {
+      "link": null,
+      "menuName": "kur4",
+      "caption": "Kur4",
+      "title": "Kur4",
+      "children": [
+        {
+          "link": "i-i-s-kur4-контрагенты-l",
+          "menuName": null,
+          "caption": "Контрагенты",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-kur4-питание-l",
+          "menuName": null,
+          "caption": "Питание",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-kur4-должности-l",
+          "menuName": null,
+          "caption": "Должности",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-kur4-сотрудники-l",
+          "menuName": null,
+          "caption": "Сотрудники",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-kur4-документ-заказа-l",
+          "menuName": null,
+          "caption": "Документ заказа",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

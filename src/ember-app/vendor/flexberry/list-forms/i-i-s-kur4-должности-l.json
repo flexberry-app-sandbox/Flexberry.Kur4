@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-kur4-должности-e",
+  "editForm": "i-i-s-kur4-должности-e",
+  "external": false,
+  "caption": "Должности",
+  "name": "IISKur4ДолжностиL",
+  "className": "ДолжностиL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-kur4-должности",
+      "modelProjection": "ДолжностиL"
+    }
+  ]
+}

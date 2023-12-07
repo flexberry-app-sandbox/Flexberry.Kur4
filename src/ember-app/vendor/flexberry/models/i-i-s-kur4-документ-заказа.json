@@ -1,0 +1,291 @@
+﻿{
+  "name": "IISKur4ДокументЗаказа",
+  "modelName": "i-i-s-kur4-документ-заказа",
+  "className": "ДокументЗаказа",
+  "nameSpace": "IIS.Kur4",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "датаДокумента",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "заказОтправ",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "заказПолучен",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "заказСобран",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "кодДокумента",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "сумма",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "контрагенты",
+      "relatedTo": "i-i-s-kur4-контрагенты",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "питание",
+      "relatedTo": "i-i-s-kur4-питание",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "сотрудники",
+      "relatedTo": "i-i-s-kur4-сотрудники",
+      "inverse": null
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ДокументЗаказаE",
+      "modelName": "i-i-s-kur4-документ-заказа",
+      "attrs": [
+        {
+          "name": "кодДокумента",
+          "caption": "Код документа",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "датаДокумента",
+          "caption": "Дата документа",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "сумма",
+          "caption": "Сумма",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "заказСобран",
+          "caption": "Заказ собран",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "заказОтправ",
+          "caption": "Заказ отправлен",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "заказПолучен",
+          "caption": "Заказ получен",
+          "hidden": false,
+          "index": 5
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "ДокументЗаказаL",
+      "modelName": "i-i-s-kur4-документ-заказа",
+      "attrs": [
+        {
+          "name": "кодДокумента",
+          "caption": "Код документа",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "датаДокумента",
+          "caption": "Дата документа",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "сумма",
+          "caption": "Сумма",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "заказСобран",
+          "caption": "Заказ собран",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "заказОтправ",
+          "caption": "Заказ отправлен",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "заказПолучен",
+          "caption": "Заказ получен",
+          "hidden": false,
+          "index": 5
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Питание",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "кодПитания",
+              "caption": "Код питания",
+              "hidden": false,
+              "index": 6
+            },
+            {
+              "name": "видПитания",
+              "caption": "Вид питания",
+              "hidden": false,
+              "index": 7
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Код питания",
+          "name": "питание",
+          "relatedTo": "i-i-s-kur4-питание",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Контрагенты",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "кодКонтиагента",
+              "caption": "Код контрагента",
+              "hidden": false,
+              "index": 8
+            },
+            {
+              "name": "наименование",
+              "caption": "Наименование контрагента",
+              "hidden": false,
+              "index": 9
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Код контрагента",
+          "name": "контрагенты",
+          "relatedTo": "i-i-s-kur4-контрагенты",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Сотрудники",
+          "belongsTo": [
+            {
+              "lookupValue": null,
+              "lookupValueField": null,
+              "relationName": "Сотрудники.Должности",
+              "belongsTo": [],
+              "hidden": false,
+              "attrs": [
+                {
+                  "name": "наименование",
+                  "caption": "Должность",
+                  "hidden": false,
+                  "index": 13
+                }
+              ],
+              "index": -1,
+              "type": null,
+              "caption": "",
+              "name": "должности",
+              "relatedTo": "i-i-s-kur4-должности",
+              "inverse": null
+            }
+          ],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фамилия",
+              "caption": "Фамилия сотрудника",
+              "hidden": false,
+              "index": 10
+            },
+            {
+              "name": "имя",
+              "caption": "Имя сотрудника",
+              "hidden": false,
+              "index": 11
+            },
+            {
+              "name": "отчество",
+              "caption": "Отчество сотрудника",
+              "hidden": false,
+              "index": 12
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Фамилия сотрудника",
+          "name": "сотрудники",
+          "relatedTo": "i-i-s-kur4-сотрудники",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

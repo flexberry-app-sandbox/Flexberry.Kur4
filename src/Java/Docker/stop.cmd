@@ -1,0 +1,1 @@
+docker-compose -p kur4-java down
